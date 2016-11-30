@@ -17,5 +17,6 @@ Copyright 2014 Jean-Philippe Eisenbarth
 Copyright 2016 Simone Bisi
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Riadattato per il corso "Progetto del Software"
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;presso Università degli studi di Modena e Reggio Emilia
 
