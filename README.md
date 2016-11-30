@@ -7,6 +7,8 @@ Contiene anche l'elaborato utilizzato per sostenere l'esame.
 
 Testato con pdfTeX (Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian)) e l'editor Gummi 0.6.5
 
+![Preview](http://bttfhvitalia.altervista.org/srs_preview.png)
+
 Authors
 -------
 Copyright 2014 Jean-Philippe Eisenbarth
