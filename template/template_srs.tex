@@ -1,0 +1,617 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Copyright 2014 Jean-Philippe Eisenbarth
+%		Original template from:
+%		https://github.com/Eisenbarth/SRS-Tex
+%
+%	Copyright 2016 Simone Bisi
+%		Riadattato per il corso "Progetto del Software"
+%		presso Università degli studi di Modena e Reggio Emilia
+%
+%		Progetto sviluppato entro 15gg dal 16 novembre 2016
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{scrreprt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{afterpage}
+
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\usepackage{placeins}
+\usepackage{multirow}
+
+\usepackage{graphicx}
+
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \author 	{Simone Bisi}
+\def \project 	{Lorem ipsum dolor sit amet}
+\def \from		{Università degli studi di Modena\\e Reggio Emilia}
+
+\hypersetup{
+    bookmarks=false,    								% bookmarks
+    pdftitle={Specifica dei requisiti del software},    % title
+    pdfauthor={\author},	                     		% author
+    pdfsubject={Gummi 0.6.5 and LaTeX},    				% subject
+    pdfkeywords={}, 	% list of keywords
+    colorlinks=true,    % false: boxed links; true: colored links
+    linkcolor=blue,     % color of internal links
+    citecolor=black,    % color of links to bibliography
+    filecolor=black,    % color of file links
+    urlcolor=purple,    % color of external links
+    linktoc=page        % only page is linked
+}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{SPECIFICA DEI REQUISITI\\ DEL SOFTWARE}\\
+        \vspace{1.9cm}
+        per\\
+        \vspace{1.9cm}
+        {\normalfont{\textit{\project}}}
+        \vspace{1.9cm}
+        \LARGE{\textsc{ }}\\
+        \vspace{1.9cm}
+        di \author\\
+        \vspace{0.5cm}
+        \textsc{\from}\\
+        \vspace{2.0cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+    
+\blankpage{}
+\blankpage{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduzione}
+%Introduzione globale all'intero SRS
+La presente sezione ha lo scopo di riportare la visione globale
+dell'intero documento di specifica dei requisiti.
+La struttura del documento è quella suggerita dallo standard
+ANSI/IEEE 830 noto come SRS (Software Requirements Spcifications).
+
+%====================================================================
+
+\section{Obiettivo}
+%Obiettivo del documento
+%Utenza a cui è diretto
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Campo d'applicazione}
+%Nome del prodotto da sviluppare
+%Obiettivi del prodotto
+%Principali benefici
+%Problematiche che si intendono analizzare
+%Problematiche che non saranno incluse nel processo di analisi
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Definizioni, acronimi, abbreviazioni}
+%Definizione di tutti i termini utilizzati, acronimi e abbreviazioni
+
+\FloatBarrier
+\begin{table}[h|]
+\centering
+\begin{tabular}{|l|p{12cm}|}
+\hline
+\textbf{Entità} & \textbf{Definizione} \\ \hline
+\textit{lorem}  & { lorem ipsum dolor sit amet } \\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+%====================================================================
+
+\section{Fonti}
+%Elenco completo di tutte le fonti (documenti, libri, siti, altro)
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\pagebreak
+
+\section{Struttura del documento}
+%Organizzazione del documento delle specifiche
+Il documento è diviso in varie sezioni, già specificate nell'indice
+di testa.
+
+\FloatBarrier
+\begin{table}[h|]
+\centering
+\begin{tabular}{|l|l|p{10cm}|}
+\hline
+ & \textbf{Sezione} & \textbf{Funzione} \\ \hline
+
+1 & \textit{Introduzione} & Presenta il prodotto soggetto alla
+specifica dei requisiti e si illustrano eventuali termini
+ricorrenti \\ \hline
+
+2 & \textit{Descrizione generale} & Si cerca di inquadrare il
+più possibile gli utilizzatori finali del software \\ \hline
+
+3 & \textit{Specifica dei requisiti} & Espone i requisiti funzionali
+e non funzionali necessari ad implementare il software \\ \hline
+
+4 & \textit{Diagrammi} & Si mostrano i diagrammi dei casi d'uso,
+delle attività e delle classi \\ \hline
+
+5 & \textit{Design Patterns} & Si individuano design patterns per
+facilitare la fase di progettazione del software \\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Descrizione generale}
+%Principali fattori che riguardano il prodotto e i suoi requisiti
+%Regole fondamentali per il concreto funzionamento del prodotto e per
+%il soddisfacimento dei requisiti (sezione 3)
+%Non ci sono ancora requisiti veri e propri
+Questa sezione evidenzia i principali fattori che riguardano il
+prodotto ed i requisiti fondamentali per il suo concreto funzionamento.
+
+%====================================================================
+
+\section{Inquadramento}
+\label{sec:inquadramento}
+%Confronto del sistema con altri prodotti simili
+Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Interfaccia di sistema}
+	%Caratteristiche dell'interfaccia con il sistema
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Interfaccia utente}
+	%Caratteristiche dell'interfaccia con l'utente
+	%In termini di formato dello screen, layout di pagine, contenuti
+	%del report o dei menù, lunghezza messaggi di errore
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Interfaccia hardware}
+	%Informazioni per configurare adeguatamente il sistema
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Interfaccia software}
+	%Eventuale necessità d'uso di altri pacchetti software di 
+	%supporto
+	%Interlacciamento con altre applicazioni
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Interfaccia di comunicazione}
+	%Protocolli di comunicazione (TCP/IP)
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Vincoli di occupazione di memoria}
+	%Caratteristiche e limiti dei supporti di memoria
+	%primaria e secondaria
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Operazioni}
+	%Operazioni di inizializzazione, backup e recovery del sistema
+	Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+	\subsection{Vincoli di installazione}
+	%Vincoli per ciascun nodo (es. sequenza inizializzazione, livello
+	%di sicurezza richiesto, ...)
+	Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Funzioni del prodotto}
+%Principali funzionalità, elencate a grandi linee
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Caratteristiche degli utenti finali}
+%Caratteristiche degli utenti del sistema in termini di esperienza,
+%capacità tecnica e livello di istruzione
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Vincoli generali}
+%Vincoli che verranno affrontati durante lo sviluppo (interfacciamento
+%con altri sistemi, operazioni parallele, elementi di criticità)
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Ipotesi iniziali}
+%Ipotesi di partenza, assunzioni e dipendenze
+%Fattori che, eventualmente modificati, hanno ripercussioni sul 
+%contenuto dell'SRS
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Requisiti futuri}
+%Requisiti che verranno dettagliati in futuro (meglio specificare
+%quando e da chi)
+Lorem ipsum dolor sit amet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Specifica dei requisiti}
+%Sezione principale, riporta i requisiti funzionali e non funzionali
+La sezione di specifica dei requisiti è la parte principale del
+documento e riporta tutti i requisiti del prodotto, divisi nelle
+categorie \textit{funzionali} e \textit{non funzionali}.
+
+%====================================================================
+
+\section{Requisiti dell'interfaccia esterna}
+%Specifica l'interfaccia del software verso l'esterno (I/O)
+%Complementare alle specifiche in 2.1 (Inquadramento)
+Lorem ipsum dolor sit amet.
+
+%====================================================================
+
+\section{Requisiti funzionali}
+%Ogni requisito è descritto tramite una scheda/tabella
+%
+%	- introduzione
+%		> attori coinvolti
+%		> descrizione generale della funzione
+%	- input
+%		(informazioni che sono gestite all'interno del processo
+%		come ingresso)
+%		> descrizione generica dei dati
+%	- descrizione (processo)
+%		(sequenza di azioni eseguite dall'operatore, eventuali
+%		messaggi di errore come risposta ad anomalie e parametri
+%		che incidono sull'output)
+%		> validazione dei dati
+%		> sequenza di operazioni
+%		> risposta ad eventuali anomalie
+%		> parametri che impattano sull'output
+%	- output
+%		(risultato del processo)
+%
+%	(tabella alternativa)
+%	----------------------------------------------------
+%	Codice 		| Area di riferimento | Titolo specifico
+%	----------------------------------------------------
+%	Input  		|
+%	----------------------------------------------------
+%	Descrizione |
+%	(processo)  |
+%	----------------------------------------------------
+%	Output		|
+%	----------------------------------------------------
+%
+
+\newcounter{rfu}
+\stepcounter{rfu}
+
+I requisiti funzionali descrivono come il sistema deve comportarsi in
+base agli input degli utenti finali e nelle varie situazioni d'uso.
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+%... Visualizza stato
+\begin{table}[h|]
+\centering
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{RF\therfu} & \textbf{-} & \textbf{-} \\ \hline
+Attori 		& \multicolumn{2}{p{12cm}|}{ - } \\ \hline
+Input  		& \multicolumn{2}{p{12cm}|}{ \specialcell{-\\-} }   \\ \hline
+Descrizione & \multicolumn{2}{p{12cm}|}{-}               		\\ \hline
+Output  	& \multicolumn{2}{p{12cm}|}{ \specialcell{-\\-} }	\\ \hline
+\end{tabular}
+\end{table}
+\stepcounter{rfu}
+
+%====================================================================
+
+\section{Requisiti non funzionali}
+I requisiti non funzionali descrivono le proprietà e le qualità dei
+servizi offerti dal sistema in maniera quantificabile.
+
+\newcounter{rnf}
+\stepcounter{rnf}
+
+	\subsection{Requisiti prestazionali}
+	%Numero di terminali supportati
+	%Numero di utenti che hanno accesso al sistema contemporaneamente
+	%Quantità e tipo di informazioni che possono essere manipolate
+	%contemporaneamente
+	
+%--------------------------------------------------------------------
+	
+	\FloatBarrier
+	\begin{table}[h|]
+	\centering
+	\begin{tabular}{|l|p{6cm}|p{6cm}|}
+	\hline
+	\textbf{RNF\thernf} & \textbf{Requisiti prestazionali} & \textbf{Tempi di risposta} \\ \hline
+	Descrizione  & \multicolumn{2}{p{12cm}|}{ Lorem ipsum dolor sit amet. }             \\ \hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+	\stepcounter{rnf}
+
+%--------------------------------------------------------------------
+
+	\subsection{Database}
+	%Tipo di database che si intende utilizzare
+	%Database non compatibili con le caratteristiche del prodotto
+	\FloatBarrier
+		\begin{table}[h|]
+	\centering
+	\begin{tabular}{|l|p{6cm}|p{6cm}|}
+	\hline
+	\textbf{RNF\thernf} & \textbf{Database} & \textbf{Gestione dei dati} \\ \hline
+	Descrizione  & \multicolumn{2}{p{12cm}|}{Lorem ipsum dolor sit amet.}\\ \hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+	\stepcounter{rnf}
+
+%--------------------------------------------------------------------
+
+	\subsection{Vincoli generali di progetto}
+	%Vincoli imposti da altri standard
+	%Limitazioni hardware
+	%Standard adottati
+	%	requisiti che derivano dagli standard esistenti
+	%	requisiti che derivano delle norme vigenti
+	%Altro
+	\FloatBarrier
+	\begin{table}[h|]
+	\centering
+	\begin{tabular}{|l|p{6cm}|p{6cm}|}
+	\hline
+	\textbf{RNF\thernf} & \textbf{Vincoli generali} & \textbf{-} \\ \hline
+	Descrizione  & \multicolumn{2}{p{12cm}|}{ Lorem ipsum dolor sit amet.} \\ \hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+	\stepcounter{rnf}
+
+%--------------------------------------------------------------------
+	
+	\subsection{Attributi del sistema}
+	\addtokomafont{labelinglabel}{\sffamily}
+	\begin{labeling}{asd}
+	\item
+	\begin{labeling}{Accessibilità del sistema}
+		
+		\item [Affidabilità]
+			%È necessario specificare le condizioni che 
+			%determineranno il grado di affidabilità accettabile del 
+			%software al momento del rilascio
+			Lorem ipsum dolor sit amet.
+		
+		\item [Accessibilità del sistema]
+			%Elenco di parametri che determinano l'accessibilità
+			%dell'intero prodotto software in termini di checkpoint,
+			%le funzionalità di recovery ed altri parametri di
+			%accessibilità
+			Lorem ipsum dolor sit amet.
+		
+		\item [Sicurezza]
+			%Elenco delle proprietà che servono a proteggere il
+			%software dagli accessi accidentali o di utenti 
+			%malintenzionati
+			Lorem ipsum dolor sit amet.
+		
+		\item [Mantenibilità]
+			%Elenco delle proprietà che rendono il prodotto software
+			%mantenibile, ad esempio la modularità, software 
+			%organizzato a moduli, elementi critici paramretrizzati
+			Lorem ipsum dolor sit amet.
+		
+		\item [Scalabilità]
+			Lorem ipsum dolor sit amet.
+		
+		\item [Portabilità]
+			%Elenco delle proprietà che rendono il prodotto software,
+			%ad esempio, indipendente dal sistema operativo, dal 
+			%DBMS, e simili
+			Lorem ipsum dolor sit amet.
+	\end{labeling}
+	\end{labeling}
+
+%--------------------------------------------------------------------
+
+	\subsection{Altri requisiti}
+	%Elenco dei requisiti che descrivono (ad esempio) funzionamento
+	%del software in modalità sperimentale ed a regime, gruppi di 
+	%utenti e relativi permessi per l'accesso alle funzionalità del 
+	%sistema, commenti addizionali, scalabilità, aumento del numero 
+	%di utenti, implicazione sulla performance, costi
+	Lorem ipsum dolor sit amet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Diagrammi}
+
+\section{Diagramma dei casi d'uso}
+I diagrammi \textit{Use Case} sono dedicati alla descrizione delle
+funzioni o servizi offerti da un sistema, così come sono percepiti e
+utilizzati dagli attori che interagiscono col sistema stesso.
+
+	\FloatBarrier
+	\begin{table}[h|]
+	\begin{tabular}{|c|}
+	\hline
+	{ . } \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+
+	\FloatBarrier
+	\begin{table}[h|]
+	\centering
+	\begin{tabular}{p{3cm}p{11cm}}
+	\textbf{Use case} & \textit{Nome} \\ 
+	\textbf{Attori} & - (iniziatore), - \\ 
+	\textbf{Tipo} & - \\ 
+	\textbf{Descrizione} & - \\
+	\\
+	\end{tabular}
+	\centering
+	\begin{tabular}{|p{7cm}|p{7cm}|}
+	\hline
+	\textbf{Azione attore} & \textbf{Risposta del sistema} \\ \hline
+	1. (azione attore) &                  \\ \hline
+	& 2. (risposta sistema) \\ \hline
+	\multicolumn{2}{|c|}{\textbf{Eccezioni}} \\ \hline
+	\multicolumn{2}{|l|}{ 2. (errore sistema) } \\ \hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+
+%====================================================================		
+
+\pagebreak
+
+\section{Diagramma delle attività}
+	\FloatBarrier
+	\begin{table}[h|]
+	\begin{tabular}{|c|}
+	\hline
+	{ . } \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+
+%====================================================================
+
+\pagebreak
+
+\section{Diagramma delle classi}
+	\FloatBarrier
+	\begin{table}[h|]
+	\begin{tabular}{|c|}
+	\hline
+	{ } \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+
+%====================================================================
+
+\pagebreak
+
+\section{Diagramma di sequenza}
+	\FloatBarrier
+	\begin{table}[h|]
+	\begin{tabular}{|c|}
+	\hline
+	{ . } \\
+	\hline
+	\end{tabular}
+	\end{table}
+	\FloatBarrier
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Design Patterns}
+
+I seguenti design pattern rappresentano soluzioni riusabili per
+trattare problemi ricorrenti nella realizzazione del prodotto.\\
+Sono indipendenti dal linguaggio di programmazione utilizzato.
+
+%====================================================================
+
+\section{Classe pattern}
+Lorem ipsum dolor sit amet.
+
+%--------------------------------------------------------------------
+
+\subsection{Nome pattern}
+Lorem ipsum dolor sit amet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\chapter{Appendici}
+%Tutto ciò che può essere utile ma non è essenziale per specificare
+%i requisiti (norme, convenzioni, supporti)
+%Lorem ipsum dolor sit amet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indice analitico
+% Uso: Parola\index{parola}
+
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\blankpage{}
+
+\end{document}
