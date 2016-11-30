@@ -10,14 +10,12 @@ Testato con pdfTeX (Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian)) e
 Authors
 -------
 Copyright 2014 Jean-Philippe Eisenbarth
-	
-	Original template from:
-	
-	[https://github.com/Eisenbarth/SRS-Tex](https://github.com/Eisenbarth/SRS-Tex)
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Original template from:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://github.com/Eisenbarth/SRS-Tex](https://github.com/Eisenbarth/SRS-Tex)
 
 Copyright 2016 Simone Bisi
-	
-	Riadattato per il corso "Progetto del Software"
-	
-	presso Università degli studi di Modena e Reggio Emilia
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Riadattato per il corso "Progetto del Software"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;presso Università degli studi di Modena e Reggio Emilia
 
